@@ -160,7 +160,7 @@ module Grape
     end
 
     def cascade?(response)
-      response && response[1][Grape::Http::Headers::X_CASCADE] == 'pass'
+      response && response[1] && response[1][Grape::Http::Headers::X_CASCADE] == 'pass'
     end
 
     def string_for(input)
